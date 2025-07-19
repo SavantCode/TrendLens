@@ -51,6 +51,12 @@ const App: React.FC = () => {
         currentWindow: true,
       });
       if (tab.id) {
+        // First, inject html2canvas.min.js
+        await chrome.scripting.executeScript({
+          target: { tabId: tab.id },
+          files: ["lib/html2canvas.min.js"], // Path to your html2canvas file in dist
+        });
+        // Then, inject your overlay.js (which now runs as a module)
         await chrome.scripting.executeScript({
           target: { tabId: tab.id },
           files: ["content/overlay.js"],

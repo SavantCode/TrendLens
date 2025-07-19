@@ -19,11 +19,31 @@
   pointer-events: none;
 }
 
-/* Annotation canvas styles */
-.annotation-canvas {
+/* Floating text window for showing analysis result */
+#floating-result-window {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 20px;
+  right: 20px;
+  max-width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
   z-index: 1000001;
-  pointer-events: none;
-} 
+  pointer-events: auto;
+}
+
+#floating-result-window h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+#floating-result-window p {
+  margin: 4px 0;
+}

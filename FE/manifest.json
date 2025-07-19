@@ -30,12 +30,13 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content/overlay.js"],
-      "css": ["content/overlay.css"]
+      "css": ["content/overlay.css"],
+      "type": "module"  
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["content/overlay.css"],
+      "resources": ["content/overlay.css", "lib/html2canvas.min.js"],
       "matches": ["<all_urls>"]
     }
   ]
